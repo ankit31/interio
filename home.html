@@ -1,0 +1,127 @@
+<html>
+<head>
+<title> Home Page </title>
+<style type="text/css">
+a{
+	text-decoration:none;
+	background-color:black;
+	color:white;
+	font-family:Times New Roman;
+	font-size:30
+}
+a:hover
+  {
+     color:black;
+     background-color: gray;
+  }
+#menu
+{
+  width:1300px;
+  height: 40px;
+  font-size: 16px;
+  font-family: Tahoma;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 2px 3px #333333;
+  background-color: black;
+  border-radius: 15px;
+  margin:8px;
+}
+
+#menu ul
+{
+  height: auto;
+  padding 8px 0px;
+  margin: 0px
+}
+
+#menu li
+{
+  display: inline;
+  padding: 20px;
+}
+#menu a
+{
+  text-decoration: none;
+  color: white;
+  padding: 8px 10spx 8px 8px;
+}
+#menu a:hover
+{
+  color:black;
+  background-color: grey;
+}
+
+</style>
+<script language="javascript">
+// Set slideShowSpeed (milliseconds)
+var slideShowSpeed = 4000
+
+// Duration of crossfade (seconds)
+var crossFadeDuration = 3
+
+// Specify the image files
+var Pic = new Array() // don't touch this
+// to add more images, just continue
+// the pattern, adding to the array below
+
+Pic[0] = 'slide-1.jpg'
+Pic[1] = 'slide-2.jpg'
+Pic[2] ='slide-3.jpg'
+Pic[3] ='slide-4.jpg'
+var j = 0
+var p = Pic.length
+
+var preLoad = new Array()
+for (i = 0; i < p; i++){
+preLoad[i] = new Image()
+preLoad[i].src = Pic[i]
+}
+
+function runSlideShow(){
+if (document.all){
+document.images.SlideShow.style.filter="blendTrans (duration=5)"
+document.images.SlideShow.style.filter="blendTrans (duration=crossFadeDuration)"
+document.images.SlideShow.filters.blendTrans.Apply () 
+}
+document.images.SlideShow.src = preLoad[j].src
+if (document.all){
+document.images.SlideShow.filters.blendTrans.Play( )
+}
+j = j + 1
+if (j > (p-1)) j=0
+t = setTimeout('runSlideShow()', slideShowSpeed)
+}
+</script>
+</head>
+<body  onLoad="runSlideShow()" background="bg.jpg">
+
+<div style="background-image:url(background.jpg);padding:5px;width:1300px;height:700px;border:1px dotted black;background-repeat:no-repeat">
+<div style="text-align:left;font-size:42px;font-family:Ravie;color:white" >Inter<span style="color:red;">i</span>o
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="contact.html" style="width:80px; height:36px;border-radius:15px;">Contact Us</a>&nbsp;<a href="signup.html" style="width:80px; height:36px;border-radius:20px;">Signup</a>
+<a href="login.html" style="width:60px;height:36px; border-color:black; border-radius:15px;">Login</a>
+</div><div style=" font-weight:bold;color:white;font-size:20px;font-family:Lucida Calligraphy;">................Customize Your Own  Space!!!!</div>
+<div id="menu">
+<h2 align="center" >
+<ul>
+
+<li><a href="about.html">About-Us</a><li>
+<li><a href="living.html">Living</a><li>
+<li><a href="dining.html">Dining</a><li>
+<li><a href="bed.html">Beds</a><li>
+<li><a href="feedback.html">Feedback</a><li></ul>
+</h2></div>
+
+<br>
+						<table align="center" border="0" cellpadding="0" cellspacing="0">
+							<tr>
+								<td id="VU" height=100 width=100>
+									<img src="slide-1.jpg" name='SlideShow' width=1200 height=400></td>
+									
+							</tr>
+						</table>
+                    
+<br><br>
+</body>
+</html>

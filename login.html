@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js">
+</script>
+<script>
+
+$(document).ready(function() {
+	$('#myform').validate ({
+	rules:{
+		
+		myemail:{
+			required:true,
+			email:true
+			},
+		
+		password:{
+			required:true,
+			minlength:8
+			}
+		
+	},
+	message:{
+		
+		myemail:{email:"Please enter a valid email address."},
+		
+		password:{minlength:"Please enter at least 8 characters."}
+	
+	}
+	});
+	});
+</script>
+</head>
+
+<body>
+<form id="myform">
+<u>LOG IN</u><br><br><br>
+
+
+EMAIL: &nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="myemail" placeholder="example@yahho.in"><br><br>
+
+PASSWORD:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="password" name="password" placeholder="Enter password"><br><br>
+
+<input type="submit" value="Log In" style="width:100px; height:30px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="reset" value="Reset" style="width:100px; height:30px;">
+
+</form>
+</body>

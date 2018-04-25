@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js">
+</script>
+<script>
+
+$(document).ready(function() {
+	$('#myform').validate ({
+	rules:{
+		name:{
+			required:true
+			},
+		myemail:{
+			required:true,
+			email:true
+			},
+		phone:{
+			required:true,
+			minlength:10
+			},
+		password:{
+			required:true,
+			minlength:8
+			},
+		
+	},
+	message:{
+		name:{required:"Please Enter Your Name."},
+		myemail:{email:"Please enter a valid email address."},
+		phone:{minlength:"Please enter at least 10 charracters."},
+		password:{minlength:"Please enter at least 8 characters."}
+	
+	}
+	});
+	});
+</script>
+</head>
+
+<body style="text-align:center;background-color:black;color:white">
+<form id="myform">
+<br><br><br><br><br><br>
+<u><b><span style="font-family:Ravie;font-size:40px">SIGN UP</span></b></u><br><br><br>
+
+NAME:  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="name" placeholder="Full name"><br><br>
+EMAIL: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="myemail" placeholder="example@yahho.in"><br><br>
+MOBILE:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="phone" placeholder="+91 Mobile"><br><br>
+PASSWORD:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="password" name="password" placeholder="Enter password"><br><br>
+GENDER: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="sex" value="Male"> Male 
+	               <input type="radio" name="sex" value="Female"> Female </center><br><br><br>
+<input type="submit" value="Sign UP" style="width:100px; height:30px;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="reset" value="RESET" style="width:100px; height:30px;">
+
+
+</form>
+</body>

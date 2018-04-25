@@ -1,0 +1,55 @@
+<html>
+<head>
+<style type="text/css">
+b{color:white;}
+</style>
+<title>Feedback Form</title>
+
+<script src ="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js">
+</script>
+<script>
+
+$(document).ready(function() {
+	$('#myform').validate ({
+	rules:{
+		name:{
+			required:true
+			},
+		myemail:{
+			required:true,
+			email:true
+			},
+		phone:{
+			required:true,
+			minlength:10
+			}
+	},
+	message:{
+		name:{required:"Please Enter Your Name."},
+		myemail:{email:"Please enter a valid email address."},
+		phone:{minlength:"Please enter at least 10 charracters."}
+	}
+	});
+	});
+</script>
+</head>
+<body background="bg.jpg">
+<form id="myform" action="home.html">
+<CENTER>
+<h3><i><b>Thank you for visiting our website..:)</b></i><h3>
+<marquee><div style="background-color:black;font-size:50px;font-family;color:white">Feedback Form</div></marquee>
+
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</b>:<INPUT TYPE="text" NAME="name"><BR>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</b>: <INPUT TYPE="text" NAME="myemail"><BR>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mobile</b>: <INPUT TYPE="text" NAME="phone"><BR>
+<b>Rate our website: </b><INPUT TYPE="text" NAME="rate"><BR>
+<b>Comments </b>:<BR>
+<TEXTAREA NAME="COMMENTS" ROWS="8" >
+</TEXTAREA><br><br>
+<INPUT TYPE="submit" VALUE="Submit">
+<INPUT TYPE="reset" VALUE="Reset"><br><br>
+</form><br><br><br>
+<a href="home.html" style=" background-color:black;height:10"><font color="white" face="Ravie">Go to Home Page</font>
+</body>
